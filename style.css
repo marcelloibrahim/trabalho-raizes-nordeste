@@ -489,6 +489,11 @@ section {
 
 #mensagemPontos {
     flex-basis: 100%;
+    background: #e9f6ed;
+    color: #21613e;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
 }
 
 .aviso {
