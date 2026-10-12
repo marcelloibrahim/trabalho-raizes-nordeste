@@ -1,10 +1,10 @@
 const produtos = [
-    { id: 1, nome: "Cuscuz recheado", descricao: "Cuscuz de milho com recheio regional.", preco: 18.90, categoria: "Cuscuz", emoji: "🫓", unidades: ["recife", "ipanema", "natal"] },
-    { id: 2, nome: "Tapioca de queijo", descricao: "Tapioca preparada na hora com queijo.", preco: 16.50, categoria: "Tapioca", emoji: "🧀", unidades: ["recife", "ipanema", "natal"] },
-    { id: 3, nome: "Bolo de macaxeira", descricao: "Fatia de bolo tradicional da casa.", preco: 9.50, categoria: "Bolos", emoji: "🍰", unidades: ["recife", "natal"] },
-    { id: 4, nome: "Café passado", descricao: "Café coado na hora.", preco: 5.50, categoria: "Bebidas", emoji: "☕", unidades: ["recife", "ipanema", "natal"] },
-    { id: 5, nome: "Suco de cajá", descricao: "Suco regional gelado.", preco: 8.90, categoria: "Bebidas", emoji: "🥤", unidades: ["recife", "ipanema"] },
-    { id: 6, nome: "Tapioca de frango", descricao: "Tapioca com frango temperado.", preco: 19.90, categoria: "Tapioca", emoji: "🌮", unidades: ["recife", "ipanema", "natal"] }
+    { id: 1, nome: "Cuscuz recheado", descricao: "Cuscuz de milho com recheio regional.", preco: 18.90, categoria: "Cuscuz", imagem: "imagens/cuscuz-recheado.jpg", unidades: ["recife", "ipanema", "natal"] },
+    { id: 2, nome: "Tapioca de queijo", descricao: "Tapioca preparada na hora com queijo.", preco: 16.50, categoria: "Tapioca", imagem: "imagens/tapioca-queijo.jpg", unidades: ["recife", "ipanema", "natal"] },
+    { id: 3, nome: "Bolo de macaxeira", descricao: "Fatia de bolo tradicional da casa.", preco: 9.50, categoria: "Bolos", imagem: "imagens/bolo-macaxeira.jpg", unidades: ["recife", "natal"] },
+    { id: 4, nome: "Café passado", descricao: "Café coado na hora.", preco: 5.50, categoria: "Bebidas", imagem: "imagens/cafe-passado.jpg", unidades: ["recife", "ipanema", "natal"] },
+    { id: 5, nome: "Suco de cajá", descricao: "Suco regional gelado.", preco: 8.90, categoria: "Bebidas", imagem: "imagens/suco-caja.jpg", unidades: ["recife", "ipanema"] },
+    { id: 6, nome: "Tapioca de frango", descricao: "Tapioca com frango temperado.", preco: 19.90, categoria: "Tapioca", imagem: "imagens/tapioca-frango.jpg", unidades: ["recife", "ipanema", "natal"] }
 ];
 
 const nomesUnidades = {
@@ -43,7 +43,7 @@ function mostrarProdutos() {
         artigo.className = "produto";
 
         artigo.innerHTML = `
-            <div class="produto-imagem" aria-hidden="true">${produto.emoji}</div>
+            <div class="produto-imagem"><img src="${produto.imagem}" alt="${produto.nome}" loading="lazy"></div>
             <div class="produto-info">
                 <h3>${produto.nome}</h3>
                 <p>${produto.descricao}</p>
